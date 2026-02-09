@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bahaya Narkotika - Say No To Drugs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .danger-gradient {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .warning-flash {
+            animation: warningFlash 2s infinite;
+        }
+        
+        @keyframes warningFlash {
+            0%, 100% { background-color: #fee2e2; }
+            50% { background-color: #fca5a5; }
+        }
+        
+        .contact-card {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+        
+        .image-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+        }
+        
+        .image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.7) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .image-container:hover .image-overlay {
+            opacity: 1;
+        }
+        
+        .scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            display: none;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        .scroll-to-top:hover {
+            background: #764ba2;
+            transform: scale(1.1);
+        }
+
+        #A{
+            background:linear-gradient(90deg, rgb(79, 60, 123), rgb(16, 33, 223));
+        }
+
+    </style>
+</head>
+<body>
+    <header class="hero-gradient text-white">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <h1 class="text-2xl font-bold">STOP NARKOBA</h1>
+                <div class="hidden md:flex space-x-6">
+                    <a id="A" href="#jenis" class="hover:text-yellow-300 transition">Jenis Narkoba</a>
+                    <a id="A" href="#bahaya" class="hover:text-yellow-300 transition">Bahaya</a>
+                    <a id="A" href="#kontak" class="hover:text-yellow-300 transition">Kontak BNN</a>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="container mx-auto px-6 py-20 text-center">
+            <h2 class="text-5xl font-bold mb-6 fade-in">SAY NO TO DRUGS</h2>
+            <p class="text-xl mb-8 fade-in">Lindungi Masa Depan, Jauhi Narkotika</p>
+            <div class="hero-image mb-8">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e3201cbc-414a-49c6-99b7-c4edb95ea6ce.png" alt="Anti-drug campaign poster showing crossed out drugs with red prohibition sign and youth holding hands in unity against narcotics" class="mx-auto rounded-lg shadow-2xl" />
+            </div>
+            <button onclick="scrollToSection('jenis')" class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-8 rounded-full transition pulse-animation">
+                Pelajari Lebih Lanjut
+            </button>
+        </div>
+    </header>
+>
+    <section id="jenis" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 text-gray-800">Jenis-jenis Narkotika</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                    <div class="image-container">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/29ca35d1-e419-4d1e-9ea7-5fb95e4dc3f2.png" alt="Dried cannabis marijuana leaves in green color scattered on dark surface showing illegal drug substance" class="w-full h-48 object-cover" />
+                        <div class="image-overlay"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-red-600">Ganja (Cannabis)</h3>
+                        <p class="text-gray-600 mb-4">Tanaman yang mengandung THC, menyebabkan halusinasi dan ketergantungan psikologis.</p>
+                        <ul class="text-sm text-gray-500">
+                            <li>• Merusak memori jangka pendek</li>
+                            <li>• Gangguan koordinasi</li>
+                            <li>• Risiko gangguan mental</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                    <div class="image-container">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4d3192dd-a149-4ff0-b165-4cb3ad185caf.png" alt="White powder heroin drug substance in small plastic bags with needle syringe showing dangerous illegal narcotics" class="w-full h-48 object-cover" />
+                        <div class="image-overlay"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-red-600">Heroin</h3>
+                        <p class="text-gray-600 mb-4">Narkotika yang sangat adiktif, berbentuk bubuk putih atau coklat.</p>
+                        <ul class="text-sm text-gray-500">
+                            <li>• Overdosis dapat fatal</li>
+                            <li>• Kerusakan organ vital</li>
+                            <li>• Ketergantungan fisik berat</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                    <div class="image-container">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2aa0b046-fff3-4bb6-ba21-4d244de9567c.png" alt="White cocaine powder arranged in lines on dark mirror surface with rolled money bill showing illegal drug consumption method" class="w-full h-48 object-cover" />
+                        <div class="image-overlay"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-red-600">Kokain</h3>
+                        <p class="text-gray-600 mb-4">Stimulan yang sangat adiktif, berasal dari tanaman koka.</p>
+                        <ul class="text-sm text-gray-500">
+                            <li>• Kerusakan jantung</li>
+                            <li>• Gangguan sistem saraf</li>
+                            <li>• Perilaku agresif</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                    <div class="image-container">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/7d00356a-c440-43f2-af1b-2d6e8d6d02bc.png" alt="Colorful ecstasy MDMA pills in various shapes and colors including pink blue yellow tablets with different logos and symbols" class="w-full h-48 object-cover" />
+                        <div class="image-overlay"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-red-600">Ekstasi (MDMA)</h3>
+                        <p class="text-gray-600 mb-4">Pil berwarna-warni yang menimbulkan euforia dan halusinasi.</p>
+                        <ul class="text-sm text-gray-500">
+                            <li>• Dehidrasi parah</li>
+                            <li>• Kerusakan otak</li>
+                            <li>• Gangguan tidur</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                    <div class="image-container">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/c58f77ef-0630-411d-9276-d38c59924b6f.png" alt="Crystal methamphetamine clear crystalline substance in plastic bag with glass pipe smoking device showing dangerous illegal drug" class="w-full h-48 object-cover" />
+                        <div class="image-overlay"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-red-600">Sabu-sabu (Metamfetamin)</h3>
+                        <p class="text-gray-600 mb-4">Kristal putih yang sangat merusak sistem saraf pusat.</p>
+                        <ul class="text-sm text-gray-500">
+                            <li>• Kerusakan gigi parah</li>
+                            <li>• Paranoia dan psikosis</li>
+                            <li>• Kerusakan otak permanen</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                    <div class="image-container">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM5cucBJtQLkJbUZKVwv8FY8BG9q90UXnMNg&s" alt="LSD acid tabs small colorful paper squares with printed designs and patterns showing hallucinogenic drug substances" class="w-full h-48 object-cover" />
+                        <div class="image-overlay"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-red-600">LSD</h3>
+                        <p class="text-gray-600 mb-4">Zat halusinogen dalam bentuk kertas kecil atau cairan.</p>
+                        <ul class="text-sm text-gray-500">
+                            <li>• Halusinasi ekstrem</li>
+                            <li>• Panic attack</li>
+                            <li>• Flashback berkelanjutan</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="bahaya" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 text-gray-800">Bahaya Narkotika</h2>
+            
+            <div class="grid md:grid-cols-2 gap-12 mb-16">
+                <div class="space-y-8">
+                    <div class="warning-flash p-6 rounded-lg">
+                        <h3 class="text-2xl font-bold mb-4 text-red-700">Dampak Fisik</h3>
+                        <ul class="space-y-2 text-gray-700">
+                            <li>🔴 Kerusakan organ vital (jantung, paru-paru, hati)</li>
+                            <li>🔴 Gangguan sistem pencernaan</li>
+                            <li>🔴 Penurunan daya tahan tubuh</li>
+                            <li>🔴 Risiko overdosis yang fatal</li>
+                            <li>🔴 Penyakit menular (HIV/AIDS, Hepatitis)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-yellow-100 p-6 rounded-lg">
+                        <h3 class="text-2xl font-bold mb-4 text-yellow-700">Dampak Psikologis</h3>
+                        <ul class="space-y-2 text-gray-700">
+                            <li>🟡 Gangguan mental dan emosi</li>
+                            <li>🟡 Depresi dan kecemasan</li>
+                            <li>🟡 Paranoia dan halusinasi</li>
+                            <li>🟡 Kehilangan motivasi hidup</li>
+                            <li>🟡 Perilaku agresif dan tidak terkendali</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="space-y-6">
+                    <div class="image-container">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/5aaa1b6a-577d-4275-9fa3-a4d6099e0a86.png" alt="Medical comparison showing healthy brain scan versus drug-damaged brain with visible deterioration and dark spots indicating neurological damage" class="w-full rounded-lg shadow-lg" />
+                        <div class="image-overlay flex items-center justify-center">
+                            <p class="text-white font-bold text-lg">Kerusakan Otak Akibat Narkoba</p>
+                        </div>
+                    </div>
+                    
+            <div class="bg-blue-50 p-8 rounded-lg mb-12">
+                <h3 class="text-2xl font-bold mb-6 text-blue-700 text-center">Dampak Sosial dan Ekonomi</h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="text-center">
+                        <div class="image-container mb-4">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/1ebd9239-9223-4e59-88d7-ad8c08e5c306.png" alt="Broken family photo torn in half showing parents and children separated due to drug addiction problems and family breakdown" class="w-full rounded-lg" />
+                        </div>
+                        <h4 class="font-bold text-blue-600">Keluarga Hancur</h4>
+                        <p class="text-sm text-gray-600">Hubungan keluarga rusak, perceraian, dan anak telantar</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="image-container mb-4">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9558542f-122a-4988-a311-746ac044269c.png" alt="Person in prison orange jumpsuit behind bars showing criminal consequences of drug use and trafficking illegal substances" class="w-full rounded-lg" />
+                        </div>
+                        <h4 class="font-bold text-blue-600">Masalah Hukum</h4>
+                        <p class="text-sm text-gray-600">Tindak kriminal, penjara, dan catatan hukum buruk</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="image-container mb-4">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f71fb989-36f0-4a64-89c5-c8099f29f538.png" alt="Empty wallet with no money and unpaid bills scattered showing financial ruin and economic hardship from drug addiction" class="w-full rounded-lg" />
+                        </div>
+                        <h4 class="font-bold text-blue-600">Kemiskinan</h4>
+                        <p class="text-sm text-gray-600">Kehilangan pekerjaan, hutang, dan bangkrut</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="danger-gradient text-white p-8 rounded-lg text-center">
+                <h3 class="text-2xl font-bold mb-6">Fakta Mengejutkan</h3>
+                <div class="grid md:grid-cols-4 gap-6">
+                    <div>
+                        <div class="text-4xl font-bold mb-2">50+</div>
+                        <div class="text-sm">Ribu korban setiap tahun</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold mb-2">70%</div>
+                        <div class="text-sm">Kriminalitas terkait narkoba</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold mb-2">15-35</div>
+                        <div class="text-sm">Usia pengguna terbanyak</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold mb-2">5%</div>
+                        <div class="text-sm">Tingkat kesembuhan</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontak" class="py-20 bg-gray-900 text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">Kontak Darurat BNN</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <div class="contact-card text-black p-8 rounded-lg text-center card-hover">
+                    <div class="image-container mb-6">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/8/88/Logo_BNN.svg" alt="BNN logo Badan Narkotika Nasional Indonesia official emblem with Indonesian national symbols and anti-drug messaging" class="w-24 h-24 mx-auto rounded-full" />
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Hotline BNN 24 Jam</h3>
+                    <div class="space-y-2">
+                        <p class="text-2xl font-bold">184</p>
+                        <p>Layanan gratis dari telepon rumah</p>
+                        <p class="font-semibold">021-80871566</p>
+                        <p>Dari HP/smartphone</p>
+                    </div>
+                </div>
+
+
+                <div class="bg-green-600 text-white p-8 rounded-lg text-center card-hover">
+                    <div class="text-4xl mb-4">📱</div>
+                    <h3 class="text-xl font-bold mb-4">SMS Center BNN</h3>
+                    <div class="space-y-2">
+                        <p class="text-2xl font-bold">08119184184</p>
+                        <p>Kirim SMS untuk konsultasi</p>
+                        <p class="text-sm italic">Format: BNN [spasi] Pesan Anda</p>
+                    </div>
+                </div>
+
+                <div class="bg-purple-600 text-white p-8 rounded-lg text-center card-hover">
+                    <div class="text-4xl mb-4">✉️</div>
+                    <h3 class="text-xl font-bold mb-4">Email Konsultasi</h3>
+                    <div class="space-y-2">
+                        <p class="font-semibold">konsultasi@bnn.go.id</p>
+                        <p>Untuk konsultasi dan pelaporan</p>
+                        <p class="font-semibold">humas@bnn.go.id</p>
+                        <p>Informasi umum</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 bg-gray-800 p-8 rounded-lg">
+                <h3 class="text-2xl font-bold mb-6 text-center">Kantor Pusat BNN</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <div class="image-container mb-4">
+                            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgs8_2iVRRVgXxC4xp1ZNt5JUkVKyVKQOEhD8H5rpZjDDNPfC7y-5bypgdW0iyrN1ONA0aAmDYBZPmdGjJ0tpzndfAcxzS1XSdGbNSLhkBmTLln-E80zkiWl26GHFcaShZKESbORggLBrSS/s1600/images.jpg" alt="BNN headquarters building modern government office complex in Jakarta with Indonesian flag and official signage" class="w-full rounded-lg" />
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold mb-4">Alamat:</h4>
+                        <p class="mb-4">
+                            Jl. MT Haryono No. 11<br>
+                            Cawang, Jakarta Timur 13630<br>
+                            DKI Jakarta
+                        </p>
+                        <h4 class="text-xl font-bold mb-4">Kontak:</h4>
+                        <p>
+                            Telp: (021) 8093-5000<br>
+                            Fax: (021) 8093-5001<br>
+                            Website: www.bnn.go.id
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 bg-red-600 p-8 rounded-lg">
+                <h3 class="text-2xl font-bold mb-6 text-center">Jika Menemukan Kasus Narkoba</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="text-xl font-bold mb-4">Langkah-langkah:</h4>
+                        <ol class="space-y-2">
+                            <li>1. Jangan mendekati atau menyentuh barang bukti</li>
+                            <li>2. Segera hubungi BNN atau Polisi</li>
+                            <li>3. Catat lokasi dan waktu kejadian</li>
+                            <li>4. Jangan mengambil foto/video di lokasi</li>
+                            <li>5. Tunggu petugas datang</li>
+                        </ol>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold mb-4">Kontak Darurat:</h4>
+                        <div class="space-y-2">
+                            <p>🚨 Polisi: <span class="text-2xl font-bold">110</span></p>
+                            <p>🏥 Ambulans: <span class="text-2xl font-bold">118</span></p>
+                            <p>🔥 Pemadam: <span class="text-2xl font-bold">113</span></p>
+                            <p>📞 BNN: <span class="text-2xl font-bold">184</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">STOP NARKOBA</h3>
+                    <p class="text-gray-400">Website edukasi tentang bahaya narkotika untuk melindungi generasi muda Indonesia.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Link Penting</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="https://www.bnn.go.id" class="hover:text-white">BNN Official</a></li>
+                        <li><a href="#" class="hover:text-white">Rehabilitasi</a></li>
+                        <li><a href="#" class="hover:text-white">Pencegahan</a></li>
+                        <li><a href="#" class="hover:text-white">Pelaporan</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Dukungan</h3>
+                    <p class="text-gray-400 mb-4">Jika Anda atau keluarga membutuhkan bantuan, jangan ragu untuk menghubungi:</p>
+                    <p class="text-yellow-400 font-bold">BNN: 184 (24 Jam)</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>© 2025 STOP NARKOBA. Bersama kita lawan narkotika untuk Indonesia yang lebih sehat.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="scrollToTop" class="scroll-to-top" onclick="scrollToTop()">
+        ↑
+    </button>
+
+    <script>
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        window.addEventListener('scroll', function() {
+            const scrollToTopBtn = document.getElementById('scrollToTop');
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.style.display = 'block';
+            } else {
+                scrollToTopBtn.style.display = 'none';
+            }
+        });
+
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const elementsToObserve = document.querySelectorAll('.card-hover, .warning-flash, .contact-card');
+            elementsToObserve.forEach(el => {
+                observer.observe(el);
+            });
+        });
+
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        }
+
+        function callEmergency(number) {
+            if (confirm(`Apakah Anda yakin ingin menghubungi ${number}?`)) {
+                window.location.href = `tel:${number}`;
+            }
+        }
+
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(function() {
+                alert('Nomor berhasil disalin!');
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactNumbers = document.querySelectorAll('.text-2xl.font-bold');
+            contactNumbers.forEach(number => {
+                number.style.cursor = 'pointer';
+                number.addEventListener('click', function() {
+                    copyToClipboard(this.textContent);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
